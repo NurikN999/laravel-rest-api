@@ -13,4 +13,9 @@ class Company extends Model
         'name',
         'iata_code'
     ];
+
+    public function company_flights()
+    {
+        return $this->hasMany(Flight::class);
+    }
 }

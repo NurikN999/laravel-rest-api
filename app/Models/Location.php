@@ -15,4 +15,14 @@ class Location extends Model
     {
         return $this->belongsTo(Country::class);
     }
+
+    public function flightsDeparture()
+    {
+        return $this->hasMany(Flight::class, 'departure_location');
+    }
+
+    public function flightsArrival()
+    {
+        return $this->hasMany(Flight::class, 'arrival_location');
+    }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\FlightController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\PassengerController;
 use Illuminate\Http\Request;
@@ -29,3 +30,5 @@ Route::prefix('/companies')->group(function () {
 Route::get('/passenger', [PassengerController::class, 'index']);
 Route::get('/locations', [LocationController::class, 'index']);
 Route::get('/countries', [CountryController::class, 'index']);
+
+Route::get('/flights', [FlightController::class, 'index']);
