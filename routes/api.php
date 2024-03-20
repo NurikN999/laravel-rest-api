@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('login', [AuthController::class, 'login']);
 Route::post('register', [AuthController::class, 'register']);
+Route::post('logout', [AuthController::class, 'logout']);
 
 Route::group(['middleware' => 'jwt.auth'], function() {
     Route::prefix('/companies')->group(function () {

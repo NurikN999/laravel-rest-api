@@ -55,4 +55,14 @@ class AuthController extends Controller
         ])->withCookie($cookie);
     }
 
+    public function logout()
+    {
+        $cookie = cookie('jwt', '', -2628000);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Logout success'
+        ])->withCookie($cookie);
+    }
+
 }
